@@ -78,7 +78,7 @@
         </snapshotRepository>
         <site>
             <id>cloudbees</id>
-            <url>gitsite:git@github.com/tinymediamanager/${project.artifactId}.git</url>
+            <url>gitsite:git@github.com/tinymediamanager/job/${project.artifactId}/site</url>
         </site>
     </distributionManagement>
 
