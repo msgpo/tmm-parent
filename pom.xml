@@ -91,8 +91,26 @@
 
     <repositories>
         <repository>
-            <id>tmm</id>
-            <url>http://repository-tinymediamanager.forge.cloudbees.com/release/</url>
+            <id>tinymediamanager-release</id>
+            <name>tinyMediaManager Release Repository</name>
+            <url>https://repository-tinymediamanager.forge.cloudbees.com/release/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>tinymediamanager-snapshot</id>
+            <name>tinyMediaManager Snapshot Repository</name>
+            <url>https://repository-tinymediamanager.forge.cloudbees.com/snapshot/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
         </repository>
     </repositories>
 
@@ -113,7 +131,6 @@
                     <artifactId>maven-site-plugin</artifactId>
                     <version>3.4</version>
                     <inherited>true</inherited>
-                    <configuration></configuration>
                     <executions>
                         <execution>
                             <id>attach-descriptor</id>
