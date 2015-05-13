@@ -59,9 +59,9 @@
     </prerequisites>
 
     <scm>
+        <url>https://github.com/tinyMediaManager/${project.artifactId}</url>
         <connection>scm:git:git@github.com:tinyMediaManager/${project.artifactId}.git</connection>
-        <url>scm:git:git@github.com:tinyMediaManager/${project.artifactId}.git</url>
-        <developerConnection>scm:git:git@github.com:tinyMediaManager${project.artifactId}.git</developerConnection>
+        <developerConnection>scm:git:git@github.com:tinyMediaManager/${project.artifactId}.git</developerConnection>
     </scm>
     <ciManagement>
         <system>Jenkins</system>
