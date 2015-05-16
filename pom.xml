@@ -59,9 +59,9 @@
     </prerequisites>
 
     <scm>
+        <url>https://github.com/tinyMediaManager/${project.artifactId}</url>
         <connection>scm:git:git@github.com:tinyMediaManager/${project.artifactId}.git</connection>
-        <url>scm:git:git@github.com:tinyMediaManager/${project.artifactId}.git</url>
-        <developerConnection>scm:git:git@github.com:tinyMediaManager${project.artifactId}.git</developerConnection>
+        <developerConnection>scm:git:git@github.com:tinyMediaManager/${project.artifactId}.git</developerConnection>
     </scm>
     <ciManagement>
         <system>Jenkins</system>
@@ -69,12 +69,12 @@
     </ciManagement>
     <distributionManagement>
         <repository>
-            <id>releases</id>
-            <url>dav:https://repository-tinymediamanager.forge.cloudbees.com/release</url>
+            <id>tinymediamanager-release</id>
+            <url>https://repository-tinymediamanager.forge.cloudbees.com/release</url>
         </repository>
         <snapshotRepository>
-            <id>snapshots</id>
-            <url>dav:https://repository-tinymediamanager.forge.cloudbees.com/snapshot</url>
+            <id>tinymediamanager-snapshot</id>
+            <url>https://repository-tinymediamanager.forge.cloudbees.com/snapshot</url>
         </snapshotRepository>
         <site>
             <id>cloudbees</id>
@@ -130,6 +130,13 @@
     </dependencies>
 
     <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-webdav-jackrabbit</artifactId>
+                <version>2.9</version>
+            </extension>
+        </extensions>
         <pluginManagement>
             <plugins>
                 <plugin>
