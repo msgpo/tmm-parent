@@ -85,6 +85,7 @@
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
 		<skipTests>true</skipTests><!-- to override on command line -->
+
 		<surefire-plugin.version>2.18.1</surefire-plugin.version>
 	</properties>
 
@@ -275,12 +276,42 @@
 		</extensions>
 	</build>
 
+	<!-- report configurations -->
 	<reporting>
 		<plugins>
+			<plugin>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>3.5</version>
+				<configuration>
+					<linkXref>true</linkXref>
+					<targetJdk>${maven.compiler.target}</targetJdk>
+					<includes>
+						<include>org/tinymediamanager/**/*.java</include>
+					</includes>
+					<minimumPriority>4</minimumPriority>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>findbugs-maven-plugin</artifactId>
+				<version>3.0.2</version>
+				<configuration>
+					<xmlOutput>true</xmlOutput>
+					<findbugsXmlOutput>true</findbugsXmlOutput>
+					<findbugsXmlWithMessages>true</findbugsXmlWithMessages>
+					<onlyAnalyze>org.tinymediamanager.-</onlyAnalyze>
+					<xmlOutputDirectory>${project.build.directory}/site</xmlOutputDirectory>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-project-info-reports-plugin</artifactId>
 				<version>2.8.1</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jxr-plugin</artifactId>
+				<version>2.5</version>
 			</plugin>
 		</plugins>
 	</reporting>
