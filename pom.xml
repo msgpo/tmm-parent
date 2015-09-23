@@ -324,6 +324,9 @@
 						</reports>
 					</reportSet>
 				</reportSets>
+				<configuration>
+					<subpackages>org.tinymediamanager</subpackages>
+				</configuration>
 			</plugin>
 		</plugins>
 	</reporting>
@@ -358,6 +361,9 @@
 								</goals>
 							</execution>
 						</executions>
+						<configuration>
+							<subpackages>org.tinymediamanager</subpackages>
+						</configuration>
 					</plugin>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
