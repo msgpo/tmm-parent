@@ -325,7 +325,9 @@
 					</reportSet>
 				</reportSets>
 				<configuration>
+					<failOnError>false</failOnError><!-- eg no sources like parent -->
 					<subpackages>org.tinymediamanager</subpackages>
+					<quiet>true</quiet>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -362,7 +364,9 @@
 							</execution>
 						</executions>
 						<configuration>
+							<failOnError>false</failOnError><!-- eg no sources like parent -->
 							<subpackages>org.tinymediamanager</subpackages>
+							<quiet>true</quiet>
 						</configuration>
 					</plugin>
 					<plugin>
