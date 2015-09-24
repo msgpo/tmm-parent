@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.tinymediamanager</groupId>
@@ -7,6 +8,9 @@
 	<version>1.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
+	<name>tinyMediaManager</name>
+	<description>a media management tool written in Java</description>
+	<url>http://www.tinymediamanager.org/</url>
 	<inceptionYear>2012</inceptionYear>
 	<organization>
 		<name>tinyMediaManager</name>
@@ -61,8 +65,8 @@
 		<url>https://github.com/tinyMediaManager/${project.artifactId}</url>
 		<connection>scm:git:git@github.com:tinyMediaManager/${project.artifactId}.git</connection>
 		<developerConnection>scm:git:git@github.com:tinyMediaManager/${project.artifactId}.git</developerConnection>
-	  <tag>HEAD</tag>
-  </scm>
+		<tag>HEAD</tag>
+	</scm>
 	<ciManagement>
 		<system>Jenkins</system>
 		<url>https://tinymediamanager.ci.cloudbees.com/job/${project.artifactId}</url>
