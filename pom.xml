@@ -174,15 +174,7 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>${surefire.version}</version>
                     <configuration>
-                        <testFailureIgnore>true</testFailureIgnore>
                         <skip>${skipTests}</skip>
-                        <!-- for JDK6/7 Support -->
-                        <argLine>-Dsun.lang.ClassLoader.allowArraySyntax=true
-                            -XX:-UseSplitVerifier
-                            -XX:+FailOverToOldVerifier</argLine>
-                        <systemPropertyVariables>
-                            <net.sourceforge.cobertura.datafile>${project.build.directory}/cobertura/cobertura.ser</net.sourceforge.cobertura.datafile>
-                        </systemPropertyVariables>
                         <includes>
                             <include>**/*.java</include>
                         </includes>
@@ -210,13 +202,6 @@
                     <configuration>
                         <testFailureIgnore>true</testFailureIgnore>
                         <skip>${skipTests}</skip>
-                        <!-- for JDK6/7 Support -->
-                        <argLine>-Dsun.lang.ClassLoader.allowArraySyntax=true
-                            -XX:-UseSplitVerifier
-                            -XX:+FailOverToOldVerifier</argLine>
-                        <systemPropertyVariables>
-                            <net.sourceforge.cobertura.datafile>${project.build.directory}/cobertura/cobertura.ser</net.sourceforge.cobertura.datafile>
-                        </systemPropertyVariables>
                         <includes>
                             <include>**/IT*.java</include>
                             <include>**/*IT.java</include>
