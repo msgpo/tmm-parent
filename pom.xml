@@ -98,7 +98,7 @@
 			<!-- we STILL have to use some non-mavenized libraries -->
 			<id>tinymediamanager-3rd-party</id>
 			<name>tinyMediaManager 3rd-party releases</name>
-			<url>https://repository-tinymediamanager.forge.cloudbees.com/release/</url>
+			<url>https://tinymediamanager.github.io/artifacts/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
